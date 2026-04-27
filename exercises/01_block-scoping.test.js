@@ -2,6 +2,8 @@ const noop = () => {}
 test('01_scope-1: can be used in place of `var`', () => {
   // Declara bandName utilitzant 'let'
   // Declara isBestBand utilitzant 'let'
+  let bandName = 'Queen';
+  let isBestBand = true;
 
   expect(bandName).toBe('Queen')
   expect(isBestBand).toBe(true)
@@ -9,12 +11,12 @@ test('01_scope-1: can be used in place of `var`', () => {
 
 test('01_scope-2: can modify the value of a `let` variable even in the next block statement', () => {
   // Declara releaseName utilitzant 'let'
-  var releaseName = 'ES6'
+  let releaseName = 'ES6';
   {
     // Modifica el valor de releaseName dins del bloc
-    releaseName = 'ES2015'
+    releaseName = 'ES2015';
   }
-  expect(releaseName).toBe(/* INTRODUEIX LA TEVA RESPOSTA AQUÍ */)
+  expect(releaseName).toBe('ES2015')
 })
 
 test('01_scope-3: cannot modify the value of a `const` variable', () => {
