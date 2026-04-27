@@ -20,10 +20,19 @@ test('02_arrow-2: pot substituir funcions tradicionals #2', () => {
   // Substitueix la 'function' en aquesta crida a 'map' per una funció fletxa.
   // Pista: no hauries de tenir claus ni 'return' quan acabis
 
-  const squares = nums.map(function(num) {
-    return num * num
-  })
-  const funcSource = squares.map.toString();
+  // const squares = nums.map(function(num) {
+  //   return num * num
+  // })
+
+  // Primera opción con el ejercicio mal planteado:
+  // const squares = nums.map(num => num * num);
+  // const funcSource = squares.map.toString();
+  // El test está mal planteado pq evalua map y no la función flecha
+
+  // Segunda opción con el ejercicio bien planteado:
+  const arrowFunctionToMap = num => num * num;
+  const squares = nums.map(arrowFunctionToMap);
+  const funcSource = arrowFunctionToMap.toString();
 
   expect(funcSource.includes('=>')).toBe(true);
   
