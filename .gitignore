@@ -1,2 +1,28 @@
 pnpm-lock.yaml
-node-modules
+
+# Dependencias
+node_modules/
+
+# Logs de npm
+npm-debug.log*
+
+# Cobertura de tests
+coverage/
+
+# Reportes de Jest (tienes jest-html-reporter y jest-junit)
+test-report.html
+junit.xml
+test-results/
+
+# Variables de entorno
+.env
+.env.local
+
+# Sistema operativo
+Thumbs.db        # Windows
+
+# Editores
+.vscode/
+.idea/
+*.suo
+*.ntvs*
