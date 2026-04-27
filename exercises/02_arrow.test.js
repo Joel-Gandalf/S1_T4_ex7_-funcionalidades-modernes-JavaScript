@@ -46,10 +46,19 @@ test('02_arrow-3: lliga `this` a l\'àmbit d\'avaluació, no a l\'àmbit d\'exec
   // Modifica l'objecte 'person'. Una de les funcions hauria de convertir-se en una funció fletxa
   // per permetre que 'this' mantingui el context correctament
   
+  // const person = {
+  //   name: 'Aaron',
+  //   greetFriends: function(friends) {
+  //     return friends.map(function(friend) {
+  //       return this.name + ' saluda a ' + friend
+  //     })
+  //   },
+  // }
+
   const person = {
     name: 'Aaron',
     greetFriends: function(friends) {
-      return friends.map(function(friend) {
+      return friends.map(friend => {
         return this.name + ' saluda a ' + friend
       })
     },
