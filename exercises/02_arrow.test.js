@@ -4,6 +4,12 @@ test('02_arrow-1: pot substituir funcions tradicionals', () => {
   // Escriu dues funcions que prenguin dos paràmetres i retornin el seu producte
   // Per a 'fnMultiply', assigna-li una funció tradicional
   // Per a 'arrowMultiply', assigna-li una funció fletxa
+  fnMultiply = function(a,b){
+    let multiply = a * b;
+    return multiply
+  }
+  
+  arrowMultiply = (a,b) => a*b; 
 
   expect(fnMultiply(5, 5)).toBe(arrowMultiply(5, 5))
 })
