@@ -93,6 +93,8 @@ test('04_destructure-8: can skip indexes in arrays', () => {
 test('04_destructure-9: can reach nested arrays', () => {
   // Crida a getNestedNumbers i extreu el primer valor com `one`, el 3 com `three` i el 6 com `six`.
   
+  const [one, , [three, ,[ , six]]] = getNestedNumbers();
+  
   expect(one).toBe(1)
   expect(three).toBe(3)
   expect(six).toBe(6)
