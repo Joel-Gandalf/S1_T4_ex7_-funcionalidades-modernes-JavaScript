@@ -13,7 +13,7 @@ test('05_template-literals-1: should support string interpolation', () => {
   // construeix una cadena utilitzant la interpolació de literals de plantilla
 
   const personsFriends = `${person.name} has ${person.friends.length} friends: ${person.friends.join(', ')}`;
-  
+
   expect(personsFriends).toBe(
     'Kent C. Dodds has 6 friends: Brooke Dodds, Matt Zabriskie, Aaron Frost, Dave Geddes, Joe Eames, Ryan Florence',
   )
@@ -21,7 +21,11 @@ test('05_template-literals-1: should support string interpolation', () => {
 
 test('05_template-literals-2: should support multi-line strings', () => {
   // construeix una cadena amb múltiples línies sense necessitat de caràcters de nova línia escapats
-  const multiLine = ``
+  const multiLine = `
+    How cool
+    is this!?
+  `
+
   expect(multiLine).toBe('\n    How cool\n    is this!?\n  ')
 })
 
