@@ -38,7 +38,8 @@ test('04_destructure-2: sets missing values to undefined', () => {
 
 test('04_destructure-3: can be used to pull apart objects', () => {
   // Utilitzant desestructuració, crida `getAddress()` i crea les variables 'city', 'state' i 'zip'.
-  
+  const {city, state, zip} = getAddress();
+
   expect(city).toBe('Salt Lake City')
   expect(state).toBe('UT')
   expect(zip).toBe(84115)
@@ -46,6 +47,7 @@ test('04_destructure-3: can be used to pull apart objects', () => {
 
 test('04_destructure-4: sets missing values to undefined', () => {
   // Utilitzant desestructuració, crida `getAddress()` i crea una variable 'address'.
+  const {city, state, zip, address} = getAddress();
   
   expect(address).toBeUndefined()
 })
