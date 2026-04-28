@@ -1,13 +1,14 @@
 test('03_new-apis-1: should be easier to determine whether a string includes another', () => {
   const sentence = 'It was the best of times. It was the worst of times'
   // crea una variable anomenada `result` que es defineixi com una crida a sentence.includes
-  let result = sentence.includes('It');
+  const result = sentence.includes('It');
   expect(result).toBe(true)
 })
 
 test('03_new-apis-2: should be easier to repeat a string', () => {
   const repeated = 'abc123'
   // crea una variable anomenada `result` que sigui el resultat de repetir la cadena 4 vegades
+  const result = repeated.repeat(4);
   expect(result).toBe('abc123abc123abc123abc123')
 })
 
