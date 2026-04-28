@@ -82,30 +82,39 @@ test('02_arrow-4: pot fer que les cadenes de filtres d\'arrays siguin més manej
   ]
 
   // SUBSTITUEIX TOTES LES FUNCIONS REGULARS PER FUNCIONS FLETXA
+  // const shoppingList = data
+  //   .filter(d => d.type != 'Widget') // Elimina els Widgets
+  //   .filter(d => d.price < 5) // Troba només els elements restants amb preu < 5
+  //   .sort((a, b) => a.qty - b.qty) // Ordena per quantitat, descendent
+  //   .map(d => d.name) // Extreu només el nom de cada element
+    
+  // CORRECCIÓN:
+  const isNotWidget = d => d.type != 'Widget'
+  const isCheap = d => d.price < 5
+  const byQty = (a, b) => a.qty - b.qty
+  const getName = d => d.name
+
   const shoppingList = data
-    .filter(function(d) {
-      return d.type != 'Widget'
-    }) // Elimina els Widgets
-    .filter(function(d) {
-      return d.price < 5
-    }) // Troba només els elements restants amb preu < 5
-    .sort(function(a, b) {
-      return a.qty - b.qty
-    }) // Ordena per quantitat, descendent
-    .map(function(d) {
-      return d.name
-    }) // Extreu només el nom de cada element
+    .filter(isNotWidget)
+    .filter(isCheap)
+    .sort(byQty)
+    .map(getName)
 
+  // const filterSource1 = data.filter.toString();
+  // const filterSource2 = shoppingList.filter.toString();
+  // const sortSource = shoppingList.sort.toString();
+  // const mapSource = shoppingList.map.toString();
 
-  const filterSource1 = data.filter.toString();
-  const filterSource2 = shoppingList.filter.toString();
-  const sortSource = shoppingList.sort.toString();
-  const mapSource = shoppingList.map.toString();
+  // Corrección:
+  const filterSource1 = isNotWidget.toString();
+  const filterSource2 = isCheap.toString();
+  const sortSource = byQty.toString();
+  const mapSource = getName.toString();
 
   expect(filterSource1.includes('=>')).toBe(true);
   expect(filterSource2.includes('=>')).toBe(true);
   expect(sortSource.includes('=>')).toBe(true);
   expect(mapSource.includes('=>')).toBe(true);    
-  expect(shoppingList.shift()).toBe('Bacon')
-  expect(shoppingList.shift()).toBe('JT Best Hits')
+  expect(shoppingList.shift()).toBe('Bacon');
+  expect(shoppingList.shift()).toBe('JT Best Hits');
 })
