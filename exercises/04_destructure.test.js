@@ -31,6 +31,8 @@ test('04_destructure-1: can be used to pull apart objects', () => {
 
 test('04_destructure-2: sets missing values to undefined', () => {
   // Utilitzant desestructuració, crida `getAddress()` i crea una variable 'address'.
+
+  const {city, state, zip, address} = getAddress();
   expect(address).toBeUndefined()
 })
 
