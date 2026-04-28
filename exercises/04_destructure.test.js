@@ -66,6 +66,7 @@ test('04_destructure-5: can alias destructured variables', () => {
 
 test('04_destructure-6: can destructure nested variables', () => {
   // Utilitzant desestructuració, crida `getAddress()` i crea les variables `lat` i `long`.
+  const {coords: {lat, long}} = getAddress();
   
   expect(lat).toBe(40.776608)
   expect(long).toBe(-111.920485)
