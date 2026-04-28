@@ -21,6 +21,9 @@ test('04_destructure-1: can be used to pull apart objects', () => {
   // const city = address.city;
   // const state = address.state;
   // const zip = address.zip;
+
+  const {city, state, zip} = getAddress()
+
   expect(city).toBe('Salt Lake City')
   expect(state).toBe('UT')
   expect(zip).toBe(84115)
