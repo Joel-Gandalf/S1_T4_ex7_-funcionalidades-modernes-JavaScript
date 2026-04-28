@@ -55,6 +55,9 @@ test('03_new-apis-5: should be easy to copy properties from one object to anothe
     p: ['x', 'y', 'z'],
   }
   // combina les fonts dins del target utilitzant Object.assign
+  const result = Object.assign(target, source1, source2, source3);
+  // Sobreescribe los tres primeros objetos en el último uno a uno, quedandose con la última propiedad sobreescrita.
+  // Object.assign(objeto destino, objeto1, objeto2, objeto3) 
 
   expect(result).toEqual({
     a: {
@@ -67,6 +70,7 @@ test('03_new-apis-5: should be easy to copy properties from one object to anothe
   })
 
   // això només és aquí per indicar que l'assignació no és profunda
+  // Solo sustituye los objetos principales por completo, no entra a comparar en los anidados.
   expect(result).not.toEqual({
     a: {
       b: 'c',
