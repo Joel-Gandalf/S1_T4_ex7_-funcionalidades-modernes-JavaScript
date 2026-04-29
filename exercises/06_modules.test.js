@@ -5,6 +5,10 @@ import {sqrt as mySqrt, square as mySquare} from '../common/Mathy'  // Import de
 
 import _ from 'lodash' // Import de 06_modules-2
 
+import {add} from '../common/Mathy' // Import de 06_modules-4
+
+
+
 
 
 test('can import Mathy', () => {
