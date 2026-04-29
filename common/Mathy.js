@@ -1,4 +1,4 @@
-export {sqrt, square, diag}
+export {sqrt, square, diag, add}
 
 function sqrt(num) {
   return Math.sqrt(num)

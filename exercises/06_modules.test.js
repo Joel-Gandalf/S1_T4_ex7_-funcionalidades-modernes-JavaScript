@@ -1,9 +1,11 @@
-import * as Mathy from '../common/Mathy'
+import * as Mathy from '../common/Mathy' // Import de 06_modules-3
 import * as IndexImport from '../common'
 // WRITE YOUR IMPORT STATEMENTS HERE
 import {sqrt as mySqrt, square as mySquare} from '../common/Mathy'  // Import de 06_modules-1
 
 import _ from 'lodash' // Import de 06_modules-2
+
+
 
 test('can import Mathy', () => {
   // this one's already done! You're welcome :)
