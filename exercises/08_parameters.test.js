@@ -2,10 +2,10 @@ test('08_parameters-1: can be triggered when the incoming argument is undefined'
   const getName = (name = 'Mercury') => name
 
   // Comprova que el valor per defecte només s'utilitza quan l'argument és `undefined`
-  expect(getName('Aaron')).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName(undefined)).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName(null)).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName()).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
+  expect(getName('Aaron')).toBe('Aaron')
+  expect(getName(undefined)).toBe('Mercury')
+  expect(getName(null)).toBe(null)
+  expect(getName()).toBe('Mercury')
 })
 
 test('08_parameters-2: aren\'t included in arguments', () => {
