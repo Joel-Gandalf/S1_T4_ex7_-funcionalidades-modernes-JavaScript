@@ -90,7 +90,17 @@ test('08_parameters-7: it can default all arguments, optionally', () => {
   // Modifica la signatura del mètode `myFunction` per permetre que
   // tots els arguments siguin opcionals
 
-  const myFunction = ({name, age, favoriteBand} = {}) => {
+  // const myFunction = ({name, age, favoriteBand} = {}) => {
+  //   expect(name).toBeDefined()
+  //   expect(age).toBeDefined()
+  //   expect(favoriteBand).toBeDefined()
+  // }
+
+  const myFunction = ({
+    name = 'Gandalf',
+    age = 42,
+    favoriteBand = 'Justice'
+  } = {}) => {
     expect(name).toBeDefined()
     expect(age).toBeDefined()
     expect(favoriteBand).toBeDefined()
