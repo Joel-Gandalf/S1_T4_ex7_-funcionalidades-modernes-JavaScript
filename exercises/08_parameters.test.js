@@ -18,6 +18,7 @@ test('08_parameters-2: aren\'t included in arguments', () => {
   expect(getName(null)).toBe(1)
   expect(getName()).toBe(0)
 })
+// El ejercicio 08_parameters-2 estaba mal planteado. El objeto arguments NO funciona con arrow functions sólo con funciones tradicionales
 
 test('08_parameters-3: can trigger a function call', () => {
   let triggerCount = 0
@@ -30,11 +31,11 @@ test('08_parameters-3: can trigger a function call', () => {
   }
 
   // Comprova que la funció per defecte només es crida quan és necessari
-  expect(triggerCount).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName('Aaron')).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName()).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(getName(undefined)).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-  expect(triggerCount).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
+  expect(triggerCount).toBe(0)
+  expect(getName('Aaron')).toBe('Aaron')
+  expect(getName()).toBe('Mercury')
+  expect(getName(undefined)).toBe('Mercury')
+  expect(triggerCount).toBe(2)
 })
 
 test('08_parameters-4: catch non-specified params', () => {
