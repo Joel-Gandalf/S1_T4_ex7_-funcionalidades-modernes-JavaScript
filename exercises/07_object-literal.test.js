@@ -19,7 +19,6 @@ test('07_object-literal-1: can use shorthand for property names', () => {
         return `${this.name} attacked ${target.name}`;
       }
   })
-  
 
   const godzilla = createMonster('Godzilla', 1000)
   const mechaGodzilla = createMonster('MechaGodzilla', 5000)
@@ -33,6 +32,7 @@ test('07_object-literal-2: can use expressions as property names', () => {
     return {
       tasty: true,
       type,
+      [type.toUpperCase() + type.length]: description
       // afegeix una expressió com a nom de propietat on el nom de la propietat sigui el resultat de type.toUpperCase() + type.length
       // sembla forçat? Ho és... 😅
     }
@@ -46,6 +46,7 @@ test('07_object-literal-2: can use expressions as property names', () => {
   expect(snickers.tasty).toBe(true)
   expect(snickers.type).toBe(twixType)
   expect(snickers.TWIX4).toBe(twixDescription)
+  
 })
 
 /*
