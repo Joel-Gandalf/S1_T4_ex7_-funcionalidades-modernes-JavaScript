@@ -7,9 +7,7 @@ import _ from 'lodash' // Import de 06_modules-2
 
 import {add} from '../common/Mathy' // Import de 06_modules-4
 
-
-
-
+import lodash from 'lodash' // Import de 06_modules-5
 
 test('can import Mathy', () => {
   // this one's already done! You're welcome :)
