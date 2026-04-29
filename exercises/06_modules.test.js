@@ -1,16 +1,20 @@
 import * as Mathy from '../common/Mathy'
 import * as IndexImport from '../common'
 // WRITE YOUR IMPORT STATEMENTS HERE
+import {sqrt as mySqrt, square as mySquare} from '../common/Mathy'  // Import de 06_modules-1
 
 test('can import Mathy', () => {
   // this one's already done! You're welcome :)
   expect(Mathy.sqrt).toBeDefined()
   expect(Mathy.square).toBeDefined()
   expect(Mathy.diag).toBeDefined()
+
+  // ES NECESARIO PONER MATHY DELANTE DE .SQRT PQ AL IMPORTARLO TODO DE UNA VEZ, DESPUÉS NECESITA UNA REFERENCIA
 })
 
 test('06_modules-1: can specify what to import, to only retain pieces of the import', () => {
   // Import `Mathy` again, but pull out only the `sqrt` as mySqrt, and `square` as mySquare
+
   expect(mySqrt).toBeDefined()
   expect(mySquare).toBeDefined()
   expect(mySqrt).toBe(Mathy.sqrt)
