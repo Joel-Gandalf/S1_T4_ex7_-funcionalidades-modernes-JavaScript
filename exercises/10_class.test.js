@@ -71,6 +71,19 @@ test('10_class-5: can extend another class', () => {
   // Crea una classe Animal
   // Crea una classe Dog que extengui Animal
   // Afegeix el mètode sayName a Dog
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  class Dog extends Animal{
+    constructor(name){
+      super(name);
+    }
+    sayName(){
+      return 'My name is: '+ this.name;
+    }
+  }
 
   const dog = new Dog('Fido')
 
