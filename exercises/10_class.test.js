@@ -97,6 +97,18 @@ test('10_class-6: can use property setters and getters', () => {
   // Crea una classe Animal (no passis el nom al constructor)
   // Afegeix un setter per a la propietat name
   // Afegeix un getter per a la propietat name
+  class Animal {
+    constructor() {
+      this._name = undefined;
+    }
+
+    get name(){
+      return this._name + ' type of animal';
+    }
+    set name(name){
+      this._name = name;
+    }
+  }
 
   const animal = new Animal()
   animal.name = 'Dog'
