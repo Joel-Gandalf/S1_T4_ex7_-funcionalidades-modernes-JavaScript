@@ -19,7 +19,8 @@ test('09_spread-1: should be able to call a function and spread the arguments', 
 test('09_spread-2: should be easier to concatenate arrays', () => {
   // Utilitza l'operador spread per concatenar arrays
   const array1 = [1, 2, 3]
-  
+
+  const result = [...array1,4,5,6]
   
   expect(result).toEqual([1, 2, 3, 4, 5, 6])
 })
@@ -30,7 +31,6 @@ test('09_spread-3: should be able to merge properties from objects', () => {
     foo: 'bar',
     baz: 'foobar',
   }
-
 
   expect(result).toEqual({
     foo: 'bar',
