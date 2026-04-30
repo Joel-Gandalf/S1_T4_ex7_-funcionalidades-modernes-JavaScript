@@ -3,6 +3,7 @@ test('12_maps-1: has a map method', () => {
   // Afegeix una nova entrada. Utilitza 'name' com a clau i 'Aaron' com a valor
   const myMap = new Map();
   myMap.set('name', 'Aaron');
+  // 2da opción:
   // const myMap = new Map([['name','Aaron']]);
 
   expect(myMap.get('name')).toBe('Aaron')
@@ -14,6 +15,8 @@ test('12_maps-2: can use objects as a key', () => {
 
   // Crea un mapa anomenat 'myMap'
   // Afegeix una nova entrada. Utilitza user com a clau i value com a valor
+  const myMap = new Map();
+  myMap.set(user, value);
 
   expect(myMap.has(user)).toBe(true)
   expect(myMap.get(user)).toBe(value)
