@@ -44,20 +44,20 @@ test('14_promises-2: should reject', () => {
   return pickApple('unripe')
     .then(
       result => {
-        // throw new Error('això no s'hauria d'executar')
+        throw new Error('això no s\'hauria d\'executar')
         // expect(result).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-        throw new Error('assert o llança aquí')
+        // throw new Error('assert o llança aquí')
       },
       error => {
         // throw new Error('això no s'hauria d'executar')
-        // expect(error).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-        throw new Error('assert o llança aquí')
+        expect(error).toBe('unripe apple')
+        // throw new Error('assert o llança aquí')
       },
     )
     .catch(error => {
-      // throw new Error('això no s'hauria d'executar')
-      // expect(error).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-      throw new Error('assert o llança aquí')
+      throw new Error('això no s\'hauria d\'executar')
+      // expect(error).toBe('unripe apple')
+      // throw new Error('assert o llança aquí')
     })
 })
 
