@@ -32,6 +32,8 @@ test('09_spread-3: should be able to merge properties from objects', () => {
     baz: 'foobar',
   }
 
+  const result = {...obj1, eggs: 'spam'};
+
   expect(result).toEqual({
     foo: 'bar',
     baz: 'foobar',
