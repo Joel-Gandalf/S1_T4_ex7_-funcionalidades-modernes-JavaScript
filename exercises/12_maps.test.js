@@ -1,6 +1,9 @@
 test('12_maps-1: has a map method', () => {
   // Crea un nou mapa anomenat 'myMap'
   // Afegeix una nova entrada. Utilitza 'name' com a clau i 'Aaron' com a valor
+  const myMap = new Map();
+  myMap.set('name', 'Aaron');
+  // const myMap = new Map([['name','Aaron']]);
 
   expect(myMap.get('name')).toBe('Aaron')
 })
