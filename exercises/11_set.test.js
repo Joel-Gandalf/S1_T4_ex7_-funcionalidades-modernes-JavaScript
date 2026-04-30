@@ -2,6 +2,13 @@ test('11_set-1: has an add method and a has method', () => {
   // Crea un nou Set anomenat 'mySet'
   // Afegeix els números 1, 2 i 3 al set
 
+  const mySet = new Set([1, 2, 3]);
+  // 2da opción:
+  // const mySet = new Set()
+  // mySet.add(1)
+  // mySet.add(2)
+  // mySet.add(3)
+
   expect(mySet.has(1)).toBe(true)
   expect(mySet.has(2)).toBe(true)
   expect(mySet.has(3)).toBe(true)
