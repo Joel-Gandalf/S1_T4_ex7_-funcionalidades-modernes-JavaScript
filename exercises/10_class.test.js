@@ -51,6 +51,15 @@ test('10_class-3: can have instance methods', () => {
 test('10_class-4: can have static methods', () => {
   // Crea una classe Animal, passa el nom al constructor,
   // i afegeix un mètode estàtic create que prengui un nom i retorni una instància
+  class Animal {
+    constructor(name) {
+      this.name = name;
+    }
+
+    static create(name){
+      return new Animal(name)
+    }
+  }
 
   const animal = new Animal()
 
