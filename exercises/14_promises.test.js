@@ -64,14 +64,15 @@ test('14_promises-2: should reject', () => {
 test('14_promises-3: errors can be caught', () => {
   return pickApple()
     .then(result => {
-      // throw new Error('això no s'hauria d'executar')
-      // expect(result).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-      throw new Error('assert o llança aquí')
+      throw new Error('això no s\'hauria d\'executar')
+      // expect(result).toBe('out of apples')
+      // throw new Error('assert o llança aquí')
     })
     .catch(error => {
-      // throw new Error('això no s'hauria d'executar')
-      // expect(error).toBe(/*INTRODUEIX LA TEVA RESPOSTA AQUÍ*/)
-      throw new Error('assert o llança aquí')
+      // throw new Error('això no s\'hauria d\'executar')
+      expect(error.message).toBe('out of apples')
+      // expect(error).toBe({message: 'out of apples'})  ESTO TAMPOCO VALDRÍA
+      // throw new Error('out of apples') 
     })
 })
 
