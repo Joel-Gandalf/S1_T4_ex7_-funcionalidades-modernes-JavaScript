@@ -40,3 +40,13 @@ test('15_async-await-2: should throw an error with a rejected promise', async ()
     expect(error).toBe('rejected')
   }
 })
+
+// FUNCIÓN COMPLETA CON RESULTADO Y ERROR:
+// const myAsyncFunction = async () => {
+//   try {
+//     const result = await doAsync(false)  // si resuelve, llega aquí
+//     console.log(result)                  // 'resolved'
+//   } catch (error) {
+//     console.log(error)                   // si rechaza, llega aquí
+//   }                                      // 'rejected'
+// }
