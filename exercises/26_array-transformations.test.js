@@ -13,7 +13,7 @@ test('26_arrays-2: Filter - create an array with only even numbers', () => {
   const numbers = [1, 2, 3, 4]
 
   // Utilitza filter per crear una nova array només amb números parells
-  // const evenNumbers = 
+  const evenNumbers = numbers.filter(num => num % 2 === 0) 
 
     expect(evenNumbers).toEqual([2, 4])
 })
