@@ -37,19 +37,18 @@ test('26_arrays-4: Reduce - calculate the total sum of numbers', () => {
 })
 
 test('26_arrays-5: Filter, multiply and sum in a single line', () => {
-  const numbers = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9]
+  const numbers = [1, 3, 7, 10, 15, 17, 11, 5, 8, 12, 9];
 
   // Crea una funció en una sola línia que:
   // - Filtri els nombres >= 10
   // - Multipliqui cada nombre filtrat per 2
   // - Calculi la suma dels nombres resultants
+  // VERSIÓN 1:
+  const result_1 = numbers.filter(num => num >= 10).map(num => num * 2).reduce((accumulator, num) => accumulator + num, 0);
+  // VERSIÓN 2:
+  const result = numbers.filter(num => num >= 10).reduce((accumulator, num) => accumulator + (num * 2), 0);
 
-
-
-
-  // const result = /* INTRODUEIX EL TEU CODI AQUÍ */
-
-    expect(result).toBe(134) // (10+15+17+11+12)*2 = 130? Verifica: 10*2+15*2+17*2+11*2+12*2 = 20+30+34+22+24 = 130
+    expect(result).toBe(130) // (10+15+17+11+12)*2 = 130? Verifica: 10*2+15*2+17*2+11*2+12*2 = 20+30+34+22+24 = 130
   // Correcció: Suma abans = 10+15+17+11+12 = 65, després *2 cada un i suma = 130
 })
 
