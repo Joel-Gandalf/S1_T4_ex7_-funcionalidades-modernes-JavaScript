@@ -69,17 +69,11 @@ test('26_arrays-7: Every and Some - case where not all are greater than 10', () 
   const numbers = [8, 11, 12, 9]
 
   // Utilitza every per comprovar si TOTS els elements són > 10
-  const allGreaterThan10 = /* INTRODUEIX EL TEU CODI AQUÍ */
+  const allGreaterThan10 = numbers.every(num => num > 10);
 
   // Utilitza some per comprovar si ALGUN element és > 10
-  
-  
-  
-  
-  
-  
-  // const someGreaterThan10 = /* INTRODUEIX EL TEU CODI AQUÍ */
+  const someGreaterThan10 = numbers.some(num => num > 10);
 
-    expect(allGreaterThan10).toBe(false)
+  expect(allGreaterThan10).toBe(false)
   expect(someGreaterThan10).toBe(true)
 })
