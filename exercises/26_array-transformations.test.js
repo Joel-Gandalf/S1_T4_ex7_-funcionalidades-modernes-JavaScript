@@ -31,12 +31,7 @@ test('26_arrays-4: Reduce - calculate the total sum of numbers', () => {
   const numbers = [13, 7, 8, 21]
 
   // Utilitza reduce per calcular la suma total
-
-
-
-
-
-  // const sum = /* INTRODUEIX EL TEU CODI AQUÍ */
+  const sum = numbers.reduce((accumulator, num) => accumulator + num, 0);
 
     expect(sum).toBe(49)
 })
