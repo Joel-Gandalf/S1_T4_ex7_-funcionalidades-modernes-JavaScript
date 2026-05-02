@@ -56,16 +56,12 @@ test('26_arrays-6: Every and Some - check if elements are greater than 10', () =
   const numbers = [11, 12, 13, 14]
 
   // Utilitza every per comprovar si TOTS els elements són > 10
-  const allGreaterThan10 = /* INTRODUEIX EL TEU CODI AQUÍ */
+  const allGreaterThan10 = numbers.every(num => num > 10);
 
   // Utilitza some per comprovar si ALGUN element és > 10
+  const someGreaterThan10 = numbers.some(num => num > 10);
 
-
-
-
-  // const someGreaterThan10 = /* INTRODUEIX EL TEU CODI AQUÍ */
-
-    expect(allGreaterThan10).toBe(true)
+  expect(allGreaterThan10).toBe(true)
   expect(someGreaterThan10).toBe(true)
 })
 
