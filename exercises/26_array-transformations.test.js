@@ -22,11 +22,7 @@ test('26_arrays-3: Find - find the first number greater than 10', () => {
   const numbers = [1, 10, 8, 11]
 
   // Utilitza find per trobar el primer número major a 10
-
-
-
-
-  // const result = /* INTRODUEIX EL TEU CODI AQUÍ */
+  const result = numbers.find(num => num > 10)
 
     expect(result).toBe(11)
 })
